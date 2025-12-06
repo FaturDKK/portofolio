@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Portofolio | Fathurrohman H.</title>
+</head>
+<body class="bg-gray-950 text-gray-200 font-sans">
+  <!-- HEADER -->
+  <header class="p-6 border-b border-gray-800 bg-gray-900/40 backdrop-blur-xl sticky top-0 z-50">
+    <div class="flex items-center justify-between">
+      <h1 class="text-xl font-bold tracking-wider">PORTOFOLIO</h1>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="p-8 py-20 text-center">
+    <div class="flex justify-center mb-6">
+      <img id="profile-photo" src="https://i.ibb.co.com/0p7s1wJN/kynavgr.png" alt="Who's me?" class="w-32 h-32 rounded-full object-cover border border-gray-700 shadow-lg" />
+    </div>
+    <h2 class="text-3xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Fathurohman Hakiki</h2>
+    <p class="text-gray-400 max-w-xl mx-auto text-sm md:text-base">Pelajar • Programmer Pemula • Creator Produk Digital • Trader • Teknisi Elektronika Dasar • Backend</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="p-8 max-w-4xl mx-auto">
+    <h3 class="text-2xl font-bold mb-4 text-blue-400">Tentang Saya</h3>
+    <div class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+      <p class="text-gray-300 text-sm md:text-base leading-relaxed">
+        Saya adalah pelajar kelas 3 SMP yang aktif di dunia coding, jual beli akun game (JB), membuat bot WhatsApp, bot Telegram, membangun website marketplace digital, hingga belajar trading dan membuat produk digital. Saya suka membuat proyek kecil yang bisa berkembang menjadi sesuatu yang berguna dan menghasilkan.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="p-8 max-w-5xl mx-auto">
+    <h3 class="text-2xl font-bold mb-4 text-blue-400">Keahlian</h3>
+
+    <!-- Script for skill animation -->
+    <script>
+      // animateSkill: adds a temporary transform + color change for 3 seconds
+      function animateSkill(el) {
+        if (!el) return;
+        // prevent double clicks while animation running
+        if (el.dataset.animating === 'true') return;
+        el.dataset.animating = 'true';
+
+        // ensure transform/transition utility classes present
+        el.classList.add('transform', 'transition-all');
+        // add animation classes
+        el.classList.add('scale-125', '-translate-y-2', 'duration-[3000ms]', 'text-white');
+
+        // after 3s remove animation classes and allow re-trigger
+        setTimeout(() => {
+          el.classList.remove('scale-125', '-translate-y-2', 'text-white', 'duration-[3000ms]');
+          el.dataset.animating = 'false';
+        }, 3000);
+      }
+
+      // Optional: allow keyboard activation (Enter/Space) when focused for accessibility
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.skill-item').forEach(el => {
+          el.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              animateSkill(el);
+            }
+          });
+        });
+      });
+    </script>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div tabindex="0" role="button" onclick="animateSkill(this)" class="skill-item transition-all bg-gray-900 border border-gray-800 p-4 rounded-xl text-center cursor-pointer">HTML</div>
+      <div tabindex="0" role="button" onclick="animateSkill(this)" class="skill-item transition-all bg-gray-900 border border-gray-800 p-4 rounded-xl text-center cursor-pointer">CSS / Tailwind</div>
+      <div tabindex="0" role="button" onclick="animateSkill(this)" class="skill-item transition-all bg-gray-900 border border-gray-800 p-4 rounded-xl text-center cursor-pointer">JavaScript Dasar</div>
+      <div tabindex="0" role="button" onclick="animateSkill(this)" class="skill-item transition-all bg-gray-900 border border-gray-800 p-4 rounded-xl text-center cursor-pointer">PHP / Laravel </div>
+      <div tabindex="0" role="button" onclick="animateSkill(this)" class="skill-item transition-all bg-gray-900 border border-gray-800 p-4 rounded-xl text-center cursor-pointer">python / flash api</div>
+      <div tabindex="0" role="button" onclick="animateSkill(this)" class="skill-item transition-all bg-gray-900 border border-gray-800 p-4 rounded-xl text-center cursor-pointer">Node.js (Baileys)</div>
+      <div tabindex="0" role="button" onclick="animateSkill(this)" class="skill-item transition-all bg-gray-900 border border-gray-800 p-4 rounded-xl text-center cursor-pointer">Telegram Bot</div>
+      <div tabindex="0" role="button" onclick="animateSkill(this)" class="skill-item transition-all bg-gray-900 border border-gray-800 p-4 rounded-xl text-center cursor-pointer">Trading Dasar</div>
+      <div tabindex="0" role="button" onclick="animateSkill(this)" class="skill-item transition-all bg-gray-900 border border-gray-800 p-4 rounded-xl text-center cursor-pointer">Elektronika Dasar</div>
+      <div tabindex="0" role="button" onclick="animateSkill(this)" class="skill-item transition-all bg-gray-900 border border-gray-800 p-4 rounded-xl text-center cursor-pointer">Cracking</div>
+      
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="p-8 max-w-6xl mx-auto">
+    <h3 class="text-2xl font-bold mb-4 text-blue-400">Project Pilihan</h3>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-gray-900 border border-gray-800 p-5 rounded-xl">
+        <h4 class="font-semibold text-lg mb-2 text-purple-400">Website Marketplace Digital</h4>
+        <p class="text-gray-400 text-sm">UI clean + sistem top-up dan pembayaran saldo pengguna.</p>
+      </div>
+
+      <div class="bg-gray-900 border border-gray-800 p-5 rounded-xl">
+        <h4 class="font-semibold text-lg mb-2 text-purple-400">Bot WhatsApp Pairing Code</h4>
+        <p class="text-gray-400 text-sm">Fitur pushkontak, cek grup, broadcast, dan menu interaktif.</p>
+      </div>
+
+      <div class="bg-gray-900 border border-gray-800 p-5 rounded-xl">
+        <h4 class="font-semibold text-lg mb-2 text-purple-400">Userbot Telegram</h4>
+        <p class="text-gray-400 text-sm">Auto-klik tombol claim bot reward Dollar with python .</p>
+      </div>
+
+      <div class="bg-gray-900 border border-gray-800 p-5 rounded-xl">
+        <h4 class="font-semibold text-lg mb-2 text-purple-400">Modul Pasbeam Otomatis</h4>
+        <p class="text-gray-400 text-sm">Berbasis ESP + kontrol via webserver.</p>
+      </div>
+
+      <div class="bg-gray-900 border border-gray-800 p-5 rounded-xl">
+        <h4 class="font-semibold text-lg mb-2 text-purple-400">Web e-commerce</h4>
+        <p class="text-gray-400 text-sm">Membuat web seperti shopee & platfrom digital penjualan lainnya dengan Laravel sederhana.</p>
+      </div>
+
+      <div class="bg-gray-900 border border-gray-800 p-5 rounded-xl">
+        <h4 class="font-semibold text-lg mb-2 text-purple-400">Akun Produk Digital</h4>
+        <p class="text-gray-400 text-sm">Pembuatan konten FYP untuk jualan produk digital.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section id="journey" class="p-8 max-w-4xl mx-auto">
+    <h3 class="text-2xl font-bold mb-4 text-blue-400">Perjalanan Hidup & Coding</h3>
+    <div class="space-y-4">
+    <div class="bg-gray-900 border border-gray-800 p-5 rounded-xl">
+        <h4 class="font-semibold text-lg">2022 - Belajar Termux</h4>
+        <p class="text-gray-400 text-sm">Belajar mengoperasikan php,python,gitu dan mysql dengan terminal termux.</p>
+      </div>
+      <div class="bg-gray-900 border border-gray-800 p-5 rounded-xl">
+        <h4 class="font-semibold text-lg">2023 - Mulai Belajar Coding</h4>
+        <p class="text-gray-400 text-sm">Belajar HTML, CSS, bot Telegram, dan mulai memahami dunia digital.</p>
+      </div>
+      <div class="bg-gray-900 border border-gray-800 p-5 rounded-xl">
+        <h4 class="font-semibold text-lg">2024 - Mulai Buat Project</h4>
+        <p class="text-gray-400 text-sm">Bot WhatsApp pertama, web jual beli akun, dan awal trading.</p>
+      </div>
+      <div class="bg-gray-900 border border-gray-800 p-5 rounded-xl">
+        <h4 class="font-semibold text-lg">2025 - Fokus Produk Digital</h4>
+        <p class="text-gray-400 text-sm">Mulai membuat ebook, modul elektronik, dan konten profesional.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="p-6 text-center text-gray-600 text-sm border-t border-gray-800 mt-10">
+    © 2025 Fathurohman Hakiki — in engineering we trust
+  </footer>
+</body>
+</html>
